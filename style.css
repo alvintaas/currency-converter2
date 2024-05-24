@@ -4,3 +4,36 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #675AFE;
+}
+.wrapper {
+    background: #ffffff;
+    width:370px;
+    padding: 30px;
+    border-radius: 10px;
+
+
+}
+.app-icon{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper header {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center
+}
+.wrapper form {
+    margin: 40px 0 20px 0;
+}
+form:where(input, select, ) {
+
+}

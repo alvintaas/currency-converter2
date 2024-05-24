@@ -18,6 +18,7 @@
 <body>
     <div class="wrapper">
         <header>Currency Converter</header>
+        <img class="app-icon" src="images/exchanging_purple.png">
         <form action="#">
             <div class="amount">
                 <p>Enter Amount</p>
@@ -28,8 +29,10 @@
                 <div class="from">
                     <p>From</p>
                     <div class="select-box">
-                        <img src="https://flagsapi.com/US/flat/64.png" alt="flag">
+                        <img src="https://flagcdn.com/dk.svg" width="50" alt="Denmark">
                         <select>
+                            <option value="DKK">DKK</option>
+                            <option value="AUD">AUD</option>
                             <option value ="USD">USD</option>
                             <option value="NPR">NPR</option>
                             <option value="INR">INR</option>
@@ -39,11 +42,14 @@
                     </div>
                 </div>
 <!--This is the converted currency-->
+                <div class="icon"><i class="fas fa-exchange-alt"></i></div>
                 <div class="to">
                     <p>To</p>
                     <div class="select-box">
-                        <img src="https://flagsapi.com/au/flat/64.png" alt="flag">
+                        <img src="https://flagcdn.com/au.svg" width="70" alt="Australia">
                         <select>
+                            <option value="DKK">DKK</option>
+                            <option value="AUD">AUD</option>
                             <option value="USD">USD</option>
                             <option value="NPR">NPR</option>
                             <option value="INR">INR</option>
@@ -54,6 +60,10 @@
                 </div>
 
             </div>
+
+            <div class="exchange-rate">1 DKK = .2 AUD</div>
+            <button>Get Exchange Rate</button>
+
         </form>
     </div>
 
