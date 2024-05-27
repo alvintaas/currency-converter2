@@ -8,3 +8,5 @@ for (let i = 0; i < dropList.length; i++) {
     dropList[i].insertAdjacentHTML("beforehand");
   }
 }
+
+stopped video at 12min 16s
