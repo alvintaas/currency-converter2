@@ -62,3 +62,5 @@ function getExchangeRate() {
       exchangeRateTxt.innerText = `${amountVal} ${fromCurrency.value} = ${totalExchangeRate} ${toCurrency.value}`;
     });
 }
+
+code;
