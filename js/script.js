@@ -41,6 +41,16 @@ getButton.addEventListener("click", (e) => {
   getExchangeRate();
 });
 
+const exchangeIcon = document.querySelector(".drop-list .icon");
+exchangeIcon.addEventListener("click", () => {
+  let tempCode = fromCurrency.value; //temporary currency code of FROM drop list
+  fromCurrency.value = toCurrency.value; //passing TO currency code to FROM currency code
+  toCurrency.value = tempCode; //passing temporary currency code to TO currency code
+  loadFlag(fromCurrency); //calling loadFlag with passing select element (fromCurrency) of FROM
+  loadFlag(toCurrency); //calling loadFlag with passing select element (toCurrency) of TO
+  getExchangeRate();
+});
+
 function getExchangeRate() {
   const amount = document.querySelector(".amount input");
   const exchangeRateTxt = document.querySelector(".exchange-rate");
@@ -58,7 +68,6 @@ function getExchangeRate() {
     .then((result) => {
       let exchangeRate = result.conversion_rates[toCurrency.value];
       let totalExchangeRate = (amountVal * exchangeRate).toFixed(2);
-
       exchangeRateTxt.innerText = `${amountVal} ${fromCurrency.value} = ${totalExchangeRate} ${toCurrency.value}`;
     });
 }
